@@ -13,15 +13,7 @@ import androidx.navigation.compose.rememberNavController
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            val navController = rememberNavController()
-            NavHost(navController = navController, startDestination = "screen_A")  {
-                composable("screen_A") {
-                    ScreenA(navController)
-                }
-                composable("screen_B") {
-                    ScreenB()
-                }
-            }
+            AppNavigation()
         }
     }
 }
